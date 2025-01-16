@@ -46,13 +46,12 @@ const App = () => {
   };
 
   return (
-    <View style={{backgroundColor: 'red', flex: 1}}>
+    <View style={{backgroundColor: 'magenta', flex: 1}}>
       <StatusBar/>
       <Text style={[styles.headerText]}>American Idioms</Text>
-      <Text style={styles.textStyles}>Search:</Text>
+      <Text style={[styles.textStyles, {fontSize: 20}]}>Search an Idiom:</Text>
       <TextInput
           style={styles.inputStyles}
-          placeholder={"Seach an idiom"}
           onChangeText={(text) => {FilterIdiom(text)}}/>
       <FlatList data={idioms} renderItem={renderItem} />
     </View>
@@ -77,11 +76,11 @@ const styles = StyleSheet.create({
     fontSize: 30,
     padding: 10,
     textAlign: 'center',
-    backgroundColor: 'skyblue'
+    backgroundColor: 'cyan'
   },
   inputStyles: {
     margin: 10,
     borderWidth: 1,
-    fontSize: 15
+    fontSize: 20
   }
 });
